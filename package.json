@@ -1,0 +1,46 @@
+{
+  "name": "cfgkeeper",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:thezzisu/cfgkeeper.git",
+  "author": "thezzisu <thezzisu@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@sinclair/typebox": "^0.20.4",
+    "ajv": "^8.6.2",
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.0.0",
+    "mustache": "^4.2.0",
+    "require-from-string": "^2.0.2",
+    "typescript": "^4.3.5",
+    "yargs": "^17.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.12",
+    "@types/mocha": "^9.0.0",
+    "@types/mustache": "^4.1.2",
+    "@types/node": "^16.6.1",
+    "@types/require-from-string": "^1.2.1",
+    "@types/yargs": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "assert": "^2.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "mocha": "^9.0.3",
+    "ts-node": "^10.2.1"
+  },
+  "bin": "./dist/cli.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.ts --ignore-path .gitignore .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "prepare": "tsc",
+    "test": "mocha"
+  }
+}
